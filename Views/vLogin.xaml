@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="dquinonesS3.Views.vLogin"
+             Title="vLogin">
+    <ScrollView>
+    <VerticalStackLayout
+        Margin="20"
+        Spacing="40"
+        Padding="30"
+        >
+        <Label 
+            Text="INICIAR SESION"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="20"
+            />
+
+        <Image
+            Source="https://dobleclickeducacion.com/wp-content/uploads/2023/04/U-ISRAEL-LOGO-1024x258.png"
+            WidthRequest="300"
+            >
+        </Image>
+        <Image
+            Source="uisrael.png"
+            WidthRequest="200"
+            >
+        </Image>
+
+        <Grid RowSpacing="15" ColumnSpacing="20"
+              HorizontalOptions="Center"
+              VerticalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+        
+
+        <Label Text="USUARIO"
+               Grid.Row="0"
+               Grid.Column="0"
+               >
+            
+        </Label>
+        <Entry x:Name="txtUsuario"
+               Placeholder="Ingresa el usuario"
+               Grid.Row="0"
+               Grid.Column="1"
+               >
+            
+        </Entry>
+        <Label Text="CONTRASEÑA"
+               Grid.Row="1"
+               Grid.Column="0"
+       >
+
+        </Label>
+        <Entry x:Name="txtContraseña"
+               Placeholder="Ingresa la contraseña"
+               IsPassword="True"
+               Grid.Row="1"
+               Grid.Column="1"
+               >
+
+        </Entry>
+
+            <Button x:Name="btnIniciarSesion"
+                Text="Iniciar Sesion"
+                Clicked="btnIniciarSesion_Clicked"
+                Grid.Row="2"
+                Grid.Column="0"
+                >
+                
+            </Button>
+
+            <Button x:Name="btnRegistrarse"
+                Text="Registrar Usuario"
+                Clicked="btnRegistrarse_Clicked"
+                Grid.Row="2"
+                Grid.Column="1"
+                >
+
+            </Button>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
