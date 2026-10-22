@@ -26,6 +26,7 @@
 
         <Button x:Name="btnGuardar"
                 Text="Guardar Usuario"
+                Style="{StaticResource GlobalBotones}"
                 Clicked="btnGuardar_Clicked"
                 >
             

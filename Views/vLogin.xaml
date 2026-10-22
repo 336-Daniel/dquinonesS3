@@ -3,13 +3,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="dquinonesS3.Views.vLogin"
              Title="vLogin">
-    <ScrollView>
-    <VerticalStackLayout
+    
+
+        <!--ESTILO EXPLICITO-->
+        <ContentPage.Resources>
+            <Style x:Key="EstiloLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="TextColor" Value="Aqua"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            </Style>
+
+            <Style x:Key="EstiloButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Coral"/>
+            </Style>
+        </ContentPage.Resources>
+    
+        <ScrollView>
+        <VerticalStackLayout
         Margin="20"
         Spacing="40"
         Padding="30"
         >
-        <Label 
+            <Label 
             Text="INICIAR SESION"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
@@ -42,6 +57,7 @@
         
 
         <Label Text="USUARIO"
+               Style="{StaticResource EstiloLabel}"
                Grid.Row="0"
                Grid.Column="0"
                >
@@ -55,6 +71,7 @@
             
         </Entry>
         <Label Text="CONTRASEÑA"
+               Style="{StaticResource EstiloLabel}"
                Grid.Row="1"
                Grid.Column="0"
        >
@@ -71,6 +88,7 @@
 
             <Button x:Name="btnIniciarSesion"
                 Text="Iniciar Sesion"
+                Style="{StaticResource GlobalBotones}"
                 Clicked="btnIniciarSesion_Clicked"
                 Grid.Row="2"
                 Grid.Column="0"
@@ -80,6 +98,7 @@
 
             <Button x:Name="btnRegistrarse"
                 Text="Registrar Usuario"
+                Style="{StaticResource EstiloButton}"
                 Clicked="btnRegistrarse_Clicked"
                 Grid.Row="2"
                 Grid.Column="1"
